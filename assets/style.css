@@ -1,0 +1,35 @@
+.container{
+    padding: 25px;
+}
+h2,
+h5,
+h6{
+    font-style: italic;
+    color: gray;
+}
+.howTo,
+.or{
+    font-weight: bold;
+}
+#reactionBtn,
+#submitBtn{
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 5px;
+    border: none;
+    color: white;
+    background-image: linear-gradient(rgb(33, 141, 109),rgb(3, 68, 128));
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -12px 8px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+#submitBtn{
+    font-size: 24px;
+    margin-left: 0;
+
+}
+input{
+    width: 100%;
+}
