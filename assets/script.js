@@ -33,6 +33,11 @@ $(document).ready(function() {
             buttons.appendTo($('#buttonRow'));
         }
 //Create function which takes user input from form and adds text to buttonArray array
-
+        $('#submitBtn').click(function() {
+            var newButtonVal = $("#btnAdder").val().trim();
+            buttonArray.push(newButtonVal);
+            var newButton = $('<button id=reactionBtn>' + newButtonVal + '</button>');
+            newButton.appendTo($('#buttonRow'));
+        })
 
 });
