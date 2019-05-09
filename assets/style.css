@@ -1,17 +1,28 @@
 .container{
-    padding: 25px;
+    padding: 10px;
+    background: rgb(233, 231, 231);
+    border-right: 25px solid rgb(233, 231, 231);
+    border-left: 25px solid rgb(233, 231, 231);
+    border-radius: 10px;
+}
+.col-md-4{
+    text-align: center;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+    border: 5px solid white;
+    box-shadow: -12px 8px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 h2,
-h5,
+h3,
 h6{
     font-style: italic;
-    color: gray;
+    color: white;
 }
-.howTo,
-.or{
+.behold{
     font-weight: bold;
 }
-#reactionBtn,
+.reactionBtn,
 #submitBtn{
     padding: 5px;
     padding-right: 10px;
@@ -23,12 +34,14 @@ h6{
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     box-shadow: -12px 8px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-
 }
 #submitBtn{
     font-size: 24px;
     margin-left: 0;
-
+}
+#submitBtn:hover{
+    background-image: linear-gradient(rgb(3, 68, 128),rgb(33, 141, 109));
+    font-weight: bold;
 }
 input{
     width: 100%;

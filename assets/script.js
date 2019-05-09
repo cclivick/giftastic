@@ -29,15 +29,21 @@ $(document).ready(function() {
 
 //For loop to create buttons from array items
         for(var i = 0; i < buttonArray.length; i++) {
-            var buttons = $('<button id=reactionBtn>' + buttonArray[i] + '</button>');
+            var buttons = $('<button class=reactionBtn id=' + buttonArray[i] + '>' + buttonArray[i] + '</button>');
             buttons.appendTo($('#buttonRow'));
         }
 //Create function which takes user input from form and adds text to buttonArray array
         $('#submitBtn').click(function() {
             var newButtonVal = $("#btnAdder").val().trim();
             buttonArray.push(newButtonVal);
-            var newButton = $('<button id=reactionBtn>' + newButtonVal + '</button>');
+            var newButton = $('<button class=reactionBtn id=' + newButtonVal + '>' + newButtonVal + '</button>');
             newButton.appendTo($('#buttonRow'));
+        })
+//Create function which generates gifs when user clicks reactionBtns
+        $("button").click(function() {
+            console.log("clicked");
+            var buttonText = $(this).attr('id');
+            console.log(buttonText);
         })
 
 });
