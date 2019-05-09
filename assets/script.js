@@ -41,7 +41,7 @@ $(document).ready(function() {
         })
 //Create function which generates gifs when user clicks reactionBtns
         //Create url for giphy API on button click
-        $("button").click(function() {
+        $("body").on("click", "button", function() {
             console.log("clicked");
             var buttonText = $(this).attr('id');
             var apikey = "vZnidhqhpNZPO651y0Y99NnMGh197Sz4";
@@ -59,7 +59,8 @@ $(document).ready(function() {
                 for(var j = 0; j < results.length; j++) {
                     var reactionGifDiv = $("<div>");
                     var rated = $("<p>");
-                    $("p").text("Rated: " + results[j].rating);
+                    rated.text("Rated: " + results[j].rating);
+                    console.log(results[j].rating);
                     var reactionGif = $("<img src=" + results[j].images.fixed_height.url + ">");
                     rated.appendTo(reactionGifDiv);
                     reactionGif.appendTo(reactionGifDiv);
@@ -67,6 +68,8 @@ $(document).ready(function() {
                 }
 
         })
+
+//OFFICE HOURS: 1.) Known Issues: Dynamically-created buttons not working with above code //
 
 })
 });
