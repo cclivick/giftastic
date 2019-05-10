@@ -57,19 +57,50 @@ $(document).ready(function() {
                 var results = (response.data);
 
                 for(var j = 0; j < results.length; j++) {
-                    var reactionGifDiv = $("<div>");
+                //create row to append in two columns -- gif and rating & gif info
+                    //gif and rating
+                    var gifRow = $("<div class=row>");
+                    var reactionGifDiv = $("<div id=gifAndRating class=col-md-6>");
                     var rated = $("<p>");
                     rated.text("Rated: " + results[j].rating);
-                    console.log(results[j].rating);
-                    var reactionGif = $("<img src=" + results[j].images.fixed_height.url + ">");
+                    var reactionGif = $("<img class='gif' src=" + results[j].images.fixed_height_still.url + ">");
+                    //gif info
+                    var reactionInfo = $("<div id=gifInfo class=col-md-6>");
+                    var gifSource = $("<a id=sourceLink target='_blank'>")
+                    gifSource.attr("href", results[j].url);
+                    gifSource.text("Source");
+                    var title = $("<p>");
+                    title.text(results[j].title);
+                    var download = $("<a id=downloadBtn href='" + results[j].images.original.url + "' download>");
+                    download.text("Download")
+                    //append gif and rating to reactionGifDiv
                     rated.appendTo(reactionGifDiv);
                     reactionGif.appendTo(reactionGifDiv);
-                    reactionGifDiv.prependTo($("#gifDiv"));
+                    //append gif info to reactionInfo
+                    gifSource.appendTo(reactionInfo);
+                    title.appendTo(reactionInfo);
+                    download.appendTo(reactionInfo);
+                    //append both to gifRow
+                    reactionGifDiv.appendTo(gifRow);
+                    reactionInfo.appendTo(gifRow);
+                    //prepend gifRow to gifDiv
+                    gifRow.prependTo($("#gifDiv"));
                 }
+                // $(function() {
+                //     $("img").each(function(e) {
+                //         var src = $(e).attr('src');
+                //         $(e).click(function() {
+                //             $(this).attr('src', replace('_s.gif', '.gif'));
+                //         }, function (){
+                //             $(this).attr('src', src);                       
+                //         });
+                //     });
+                // });
 
+            })
+    })
+        $("body").on("click", "img", function() {
+            console.log("clicked")
+            $(this).attr("src").replace("_s.gif", ".gif")
         })
-
-//OFFICE HOURS: 1.) Known Issues: Dynamically-created buttons not working with above code //
-
-})
 });
