@@ -41,7 +41,7 @@ $(document).ready(function() {
         })
 //Create function which generates gifs when user clicks reactionBtns
         //Create url for giphy API on button click
-        $("body").on("click", "button", function() {
+        $("body").on("click touchstart", "button", function() {
             console.log("clicked");
             var buttonText = $(this).attr('id');
             var apikey = "vZnidhqhpNZPO651y0Y99NnMGh197Sz4";
@@ -63,7 +63,7 @@ $(document).ready(function() {
                     var reactionGifDiv = $("<div id=gifAndRating class=col-md-6>");
                     var rated = $("<p>");
                     rated.text("Rated: " + results[j].rating);
-                    var reactionGif = $("<img class='gif' src=" + results[j].images.fixed_height_still.url + ">");
+                    var reactionGif = $("<img class='gif' src=" + results[j].images.fixed_height.url + ">");
                     //gif info
                     var reactionInfo = $("<div id=gifInfo class=col-md-6>");
                     var gifSource = $("<a id=sourceLink target='_blank'>")
