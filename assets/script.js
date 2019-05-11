@@ -41,7 +41,7 @@ $(document).ready(function() {
         })
 //Create function which generates gifs when user clicks reactionBtns
         //Create url for giphy API on button click
-        $("body").on("click touchstart", "button", function() {
+        $("body").on("click", "button", function() {
             console.log("clicked");
             var buttonText = $(this).attr('id');
             var apikey = "vZnidhqhpNZPO651y0Y99NnMGh197Sz4";
@@ -63,7 +63,7 @@ $(document).ready(function() {
                     var reactionGifDiv = $("<div id=gifAndRating class=col-md-6>");
                     var rated = $("<p>");
                     rated.text("Rated: " + results[j].rating);
-                    var reactionGif = $("<img class='gif' src=" + results[j].images.fixed_height.url + ">");
+                    var reactionGif = $("<img class='gif' src=" + results[j].images.fixed_height_still.url + ">");
                     //gif info
                     var reactionInfo = $("<div id=gifInfo class=col-md-6>");
                     var gifSource = $("<a id=sourceLink target='_blank'>")
@@ -71,7 +71,7 @@ $(document).ready(function() {
                     gifSource.text("Source");
                     var title = $("<p>");
                     title.text(results[j].title);
-                    var download = $("<a id=downloadBtn href='" + results[j].images.original.url + "' download>");
+                    var download = $("<a id=downloadBtn href='" + results[j].images.original.url + "' download=>");
                     download.text("Download")
                     //append gif and rating to reactionGifDiv
                     rated.appendTo(reactionGifDiv);
@@ -101,6 +101,12 @@ $(document).ready(function() {
     })
         $("body").on("click", "img", function() {
             console.log("clicked")
+            var imgSrc = $(this).attr("src");
+            imgSrc.indexOf("_s.gif")
             $(this).attr("src").replace("_s.gif", ".gif")
         })
+
+//OFFICE HOURS: 1.) Download buttons not triggering download. does this need to be a function? Or are the hrefs wrong?
+//OFFICE HOURS: 2.) Touchstart doesn't work on mobile
+//OFFICE HOURS: 3.) Images don't play/pause on click. Tried the commented function and click event above.  
 });
