@@ -63,7 +63,7 @@ $(document).ready(function() {
                     var reactionGifDiv = $("<div id=gifAndRating class=col-md-6>");
                     var rated = $("<p>");
                     rated.text("Rated: " + results[j].rating);
-                    var reactionGif = $("<img class='gif' src=" + results[j].images.fixed_height_still.url + ">");
+                    var reactionGif = $("<img class='gif' src=" + results[j].images.fixed_height.url + ">");
                     //gif info
                     var reactionInfo = $("<div id=gifInfo class=col-md-6>");
                     var gifSource = $("<a id=sourceLink target='_blank'>")
@@ -99,12 +99,12 @@ $(document).ready(function() {
 
             })
     })
-        $("body").on("click", "img", function() {
-            console.log("clicked")
-            var imgSrc = $(this).attr("src");
-            imgSrc.indexOf("_s.gif")
-            $(this).attr("src").replace("_s.gif", ".gif")
-        })
+        // $("body").on("click", "img", function() {
+        //     console.log("clicked")
+        //     // var imgSrc = $(this).attr("src");
+        //     // imgSrc.indexOf("_s.gif")
+        //     $(this).attr("src").replace("_s.gif", ".gif")
+        // })
 
 //OFFICE HOURS: 1.) Download buttons not triggering download. does this need to be a function? Or are the hrefs wrong?
 //OFFICE HOURS: 2.) Touchstart doesn't work on mobile
