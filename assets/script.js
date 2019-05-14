@@ -45,6 +45,7 @@ $(document).ready(function() {
             console.log("clicked");
             var buttonText = $(this).attr('id');
             var apikey = "vZnidhqhpNZPO651y0Y99NnMGh197Sz4";
+            //NOTE: Change http to https in queryURL if error runs that warns about unauthenticated sources
             var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
               buttonText + "&api_key=" + apikey + "&limit=10";
         //Get array of objects from giphy API
