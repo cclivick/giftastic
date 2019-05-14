@@ -45,7 +45,7 @@ $(document).ready(function() {
             console.log("clicked");
             var buttonText = $(this).attr('id');
             var apikey = "vZnidhqhpNZPO651y0Y99NnMGh197Sz4";
-            var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
               buttonText + "&api_key=" + apikey + "&limit=10";
         //Get array of objects from giphy API
             $.ajax({
