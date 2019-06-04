@@ -87,27 +87,6 @@ $(document).ready(function() {
                     //prepend gifRow to gifDiv
                     gifRow.prependTo($("#gifDiv"));
                 }
-                // $(function() {
-                //     $("img").each(function(e) {
-                //         var src = $(e).attr('src');
-                //         $(e).click(function() {
-                //             $(this).attr('src', replace('_s.gif', '.gif'));
-                //         }, function (){
-                //             $(this).attr('src', src);                       
-                //         });
-                //     });
-                // });
-
             })
     })
-        // $("body").on("click", "img", function() {
-        //     console.log("clicked")
-        //     // var imgSrc = $(this).attr("src");
-        //     // imgSrc.indexOf("_s.gif")
-        //     $(this).attr("src").replace("_s.gif", ".gif")
-        // })
-
-//OFFICE HOURS: 1.) Download buttons not triggering download. does this need to be a function? Or are the hrefs wrong?
-//OFFICE HOURS: 2.) Touchstart doesn't work on mobile
-//OFFICE HOURS: 3.) Images don't play/pause on click. Tried the commented function and click event above.  
 });
