@@ -1,6 +1,6 @@
 # Giphy Reaction GIF Generator
 
-![gif1](https://user-images.githubusercontent.com/46388110/59710802-58779300-91cf-11e9-9f3c-da7d276f7392.png)
+![gif1](https://user-images.githubusercontent.com/46388110/59710863-793fe880-91cf-11e9-871f-9b9b423a8a63.png)
 
 ## Main Concept
 
